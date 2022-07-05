@@ -10,7 +10,7 @@
 
   <style>
     :root{
-      --input_text_color : #f1f1f1;
+      --input_text_color : #d5d5d5;
     }
     * {
       margin: 0;
@@ -21,9 +21,8 @@
       width: 100%;
       height: 100%;
       box-sizing: border-box;
-      background-image: url('assets/background.jpg');
+      background-image: url('assets/logo-facultad.jpg');
       background-repeat: no-repeat;
-      background-attachment: fixed;
       background-size: cover;
     }
 
@@ -33,22 +32,21 @@
       align-items: center;
       flex-direction: column;
 
-      color: white;
     }
 
     .calculadora_container {
       display: inherit;
       flex-direction: column;
-      width: 90vw;
+      width: 95vw;
       margin: 20px 0;
     }
 
     .cristal_background {
       padding: 10px;
       border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.4);
       -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(20px);
     }
 
     /* efecto trnasparente para los input */
@@ -60,6 +58,8 @@
       color: var(--input_text_color);
       text-align: right;
       padding: 0 10px;
+
+      font-size: 1.5em;
     }
     ::-webkit-input-placeholder {
       /* Edge */
@@ -84,7 +84,11 @@
       margin-top: 2em;
       color: #f8f8f8b1;
     }
-    h2{
+    small{
+      font-size: .9em;
+      color: #f8f8f8b1;
+    }
+    h2, span{
       font-size: 1.5em;
       color: #f8f8f8b1;
     }
@@ -100,19 +104,37 @@
     h1{
       text-align: center;
     }
+    .logo_universidad{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .logo{
+      border-radius: 20px;
+      width: 100px;
+    }
   </style>
 </head>
 
 <body>
   <div class="vista ">
-    <h1 class="pt-2">Calculadora de tolerancias para ejes y agujeros</h1>
+    <div class="row">
+      <div class="col-md-112">
+          <div class="logo_universidad">
+            <img class="logo" src="assets/logo-universidad.jpg" >
+            <h1 class="text-danger">Universidad Técnica de Ambato “UTA”</h1>
+            <h2 class="pt-2 text-dark">Calculadora de tolerancias para ejes y agujeros</h2>
+          </div>
+      </div>
+    </div>
     <div class="calculadora_container cristal_background">
       <div class="row">
         <div class="col-md-12">
           <label for="diametro">
             <h2>Diámetro</h2>
           </label>
-          <p>Medida nominal</p>
+          <h2>Medida nominal</h2>
           <input type="number" id="diametro" >
           <span>mm</span>
         </div>
