@@ -634,6 +634,8 @@ function agujero(){
 
   limite_superior_agujero.value = u
   limite_inferior_agujero.value = l
+  tolerancia_agujero_value.value = u - l
+
   
   diametro_max_agujero.value = _diametro_max_agujero
   diametro_min_agujero.value = _diametro_min_agujero
@@ -1260,6 +1262,7 @@ function eje(){
 
   limite_superior_eje.value = u
   limite_inferior_eje.value = l
+  tolerancia_eje_value.value = u - l
   
   diametro_max_eje.value = _diametro_max_eje
   diametro_min_eje.value = _diametro_min_eje
